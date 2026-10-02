@@ -2,6 +2,8 @@
 
 <html lang="en-GB">
 <head>
+<meta name="color-scheme" content="dark">
+<meta name="supported-color-schemes" content="dark">
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Stoic Spartan — Mindset &amp; Market Mastery. Trader development through technical analysis, strategy development, risk management, trading psychology, behavioural coaching and data-driven performance analysis." name="description"/>
@@ -995,9 +997,9 @@ h1,h2,h3,.section-title{text-align:center!important}
   letter-spacing:.12em!important;
 }
 
-.data-domains{
-  margin-top:32px!important;
-}.data-domains p{
+.data-domains{  margin-top:32px!important;
+}
+.data-domains p{
   grid-template-columns:145px 1fr!important;
   gap:18px!important;
   padding:16px 0!important;
@@ -1440,7 +1442,105 @@ img,svg,video,canvas{max-width:100%}
   color:#090806 !important;
 }
 
-</style></head>
+</style><style>
+
+/* V5.14 — page-wide CTA consistency and offer contrast audit.
+   Commercial actions are deliberately solid gold across desktop/mobile and all offer cards. */
+html{color-scheme:dark;}
+
+/* Every commercial/application action gets one visual language. */
+a.button.primary,
+button.button.primary,
+a.button.primary:link,
+a.button.primary:visited,
+a.nav-cta,
+a.nav-cta:link,
+a.nav-cta:visited,
+a.mobile-apply,
+a.mobile-apply:link,
+a.mobile-apply:visited {
+  background:#d7a23d !important;
+  background-image:none !important;
+  border-color:#e5ba62 !important;
+  color:#090806 !important;
+  -webkit-text-fill-color:#090806 !important;
+  opacity:1 !important;
+  filter:none !important;
+  mix-blend-mode:normal !important;
+  box-shadow:0 8px 24px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,244,204,.22) !important;
+}
+a.button.primary:hover,
+a.button.primary:focus-visible,
+button.button.primary:hover,
+button.button.primary:focus-visible,
+a.nav-cta:hover,
+a.nav-cta:focus-visible,
+a.mobile-apply:hover,
+a.mobile-apply:focus-visible {
+  background:#e5b652 !important;
+  background-image:none !important;
+  border-color:#f0cf83 !important;
+  color:#090806 !important;
+  -webkit-text-fill-color:#090806 !important;
+}
+a.button.primary:active,
+button.button.primary:active,
+a.nav-cta:active,
+a.mobile-apply:active {
+  background:#c8902f !important;
+  border-color:#dda94c !important;
+  transform:translateY(0) !important;
+}
+
+/* Make offer names read as deliberate product titles rather than muted metadata. */
+.mentorship .price-card .tier > span {
+  color:#d9aa55 !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#d9aa55 !important;
+}
+.mentorship .price-card .tier > strong {
+  color:#e8d8bc !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#e8d8bc !important;
+  text-shadow:0 1px 0 rgba(0,0,0,.35) !important;
+}
+.mentorship .price-card h3,
+.mentorship .price-card h3 > strong {
+  color:#f4efe6 !important;
+  opacity:1 !important;
+  -webkit-text-fill-color:#f4efe6 !important;
+}
+.mentorship .price-card h3 span {
+  color:#bdb4a8 !important;
+  -webkit-text-fill-color:#bdb4a8 !important;
+}
+
+/* Keep the Pro path visibly featured without turning every card border gold. */
+.mentorship .price-card.featured {
+  border-color:#d0a04c !important;
+  box-shadow:0 18px 48px rgba(0,0,0,.42), 0 0 0 1px rgba(215,162,61,.12) !important;
+}
+.mentorship .price-card.featured .recommended {
+  background:#d7a23d !important;
+  color:#090806 !important;
+  -webkit-text-fill-color:#090806 !important;
+}
+
+/* Defensive mobile rule: CTA colours and offer titles must not be auto-muted. */
+@media (max-width:860px){
+  a.button.primary,
+  button.button.primary,
+  a.nav-cta,
+  a.mobile-apply {
+    background:#d7a23d !important;
+    border-color:#e5ba62 !important;
+    color:#090806 !important;
+    -webkit-text-fill-color:#090806 !important;
+  }
+  .mentorship .price-card .tier > strong{color:#e8d8bc !important;-webkit-text-fill-color:#e8d8bc !important;}
+}
+</style>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -1896,8 +1996,7 @@ img,svg,video,canvas{max-width:100%}
 <h3>What a performance conversation actually inspects.</h3>
 <span>Illustrative example — not client data</span>
 </div>
-<div class="review-grid">
-<div><b>Environment</b><p>NQ, New York Open. Rotational auction trading inside prior value with overlapping structure and no clean directional expansion.</p></div>
+<div class="review-grid"><div><b>Environment</b><p>NQ, New York Open. Rotational auction trading inside prior value with overlapping structure and no clean directional expansion.</p></div>
 <div><b>Location</b><p>Long initiated around mid-value rather than at VAL, a value-edge rejection or a confirmed reclaim with space to rotate.</p></div>
 <div><b>Behaviour</b><p>Continuation was anticipated before displacement and confirmation; the stop then created an immediate urge to re-enter.</p></div>
 <div><b>Decision vs Environment Fit</b><p>Poor. A directional continuation decision was deployed inside an environment still behaving rotationally.</p></div>
@@ -1996,7 +2095,8 @@ img,svg,video,canvas{max-width:100%}
       <div class="carousel-person"><strong>Irene</strong><span>Support received: Pro Mentorship</span></div>
       <a href="#testimonial-irene" data-open-testimonial="testimonial-irene">Read Irene's full story</a>
     </article>
-    <article class="featured-story-slide" data-story-index="4">      <blockquote>“It is so, so, so valuable — please never stop. You’re genuinely so helpful and explain everything very clearly.”</blockquote>
+    <article class="featured-story-slide" data-story-index="4">
+      <blockquote>“It is so, so, so valuable — please never stop. You’re genuinely so helpful and explain everything very clearly.”</blockquote>
       <div class="carousel-person"><strong>Emily</strong><span>Support received: Pro Mentorship</span></div>
       <a href="#testimonial-emily" data-open-testimonial="testimonial-emily">Read Emily's full story</a>
     </article>
