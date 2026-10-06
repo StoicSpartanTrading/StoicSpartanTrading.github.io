@@ -1633,20 +1633,20 @@ body{overflow-x:hidden}
 .story-main{background:#080806}
 .story-page-hero{padding:82px 0 74px;background:radial-gradient(circle at 15% 10%,rgba(200,154,75,.10),transparent 32%),#090806;border-bottom:1px solid var(--line2)}
 .story-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.72fr);gap:58px;align-items:center}
-.story-hero-copy h1{font-family:var(--serif);font-size:clamp(48px,6vw,82px);line-height:.93;letter-spacing:-.025em;margin:0 0 24px}.story-hero-copy .lead{color:#d8d0c5}
+.story-hero-copy h1{font-family:var(--serif);font-size:clamp(48px,6vw,82px);line-height:.93;letter-spacing:-.025em;margin:0 0 24px}
 .story-photo-frame{margin:0;border:1px solid rgba(200,154,75,.38);background:#0f0e0b;padding:10px;box-shadow:0 28px 70px rgba(0,0,0,.42)}
 .story-photo-frame img{width:100%;aspect-ratio:1.095/1;object-fit:cover;background:#11100d}
 .story-photo-frame figcaption{padding:10px 4px 2px;color:#9c9387;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
 .story-section{padding:92px 0}
 .story-alt{background:#0c0b09;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
 .story-copy{max-width:900px}
-.story-copy>p{font-size:17px;color:#ded7cc;line-height:1.85;margin:0 0 24px}
+.story-copy>p{font-size:17px;color:#ebe4da!important;-webkit-text-fill-color:#ebe4da;line-height:1.85;margin:0 0 24px}
 .story-copy>p strong{color:#f1e7d8}
 .story-copy .section-title{max-width:800px}
 .story-pullquote{font-family:var(--serif)!important;font-size:clamp(28px,3.4vw,44px)!important;line-height:1.2!important;color:#ead9bb!important;border-left:2px solid var(--gold);padding:8px 0 8px 26px;margin:42px 0!important}
 .story-questions,.story-principles,.story-sequence,.story-final-steps{display:grid;gap:10px;margin:28px 0 34px;padding:22px 24px;border:1px solid rgba(200,154,75,.22);background:rgba(200,154,75,.035)}
 .story-questions p{margin:0;color:#e1d8ca;font-family:var(--serif);font-size:23px}
-.story-principles span,.story-sequence span,.story-final-steps span{display:block;color:#e1d8cc;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.story-principles span,.story-sequence span,.story-final-steps span{display:block;color:#eee6da!important;-webkit-text-fill-color:#eee6da;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06)}
 .story-principles span:last-child,.story-sequence span:last-child,.story-final-steps span:last-child{border-bottom:0}
 .story-inner-voices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:28px 0 34px}
 .story-inner-voices blockquote{margin:0;padding:18px 20px;border:1px solid rgba(200,154,75,.22);background:#11100d;color:#e4d8c7;font-family:var(--serif);font-size:25px}
@@ -1656,7 +1656,7 @@ body{overflow-x:hidden}
 .story-cta{margin-top:34px}
 @media(max-width:820px){.story-hero-grid{grid-template-columns:1fr;gap:34px}.story-photo-frame{max-width:620px}.story-inner-voices{grid-template-columns:1fr}.story-section{padding:70px 0}}
 @media(max-width:520px){.story-page-hero{padding:58px 0 50px}.story-hero-copy h1{font-size:47px}.story-copy>p{font-size:16px}.story-pullquote{padding-left:18px}.story-questions,.story-principles,.story-sequence,.story-final-steps{padding:18px}.story-brand-line{font-size:40px!important}}
-</style></head>
+</style><style>.story-main .lead{color:#ddd4c8!important;-webkit-text-fill-color:#ddd4c8}.story-questions p{color:#eee5d8!important;-webkit-text-fill-color:#eee5d8}</style></head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -1689,7 +1689,7 @@ body{overflow-x:hidden}
 <div class="page-backline"><a href="index.html">← Home</a><a href="index.html#mark">Meet Mark</a><a href="index.html#apply">Apply</a></div>
 </div>
 <figure class="story-photo-frame">
-<img id="spartan-story-photo" src="spartan-story-photo-700.jpg" alt="Mark, Stoic Spartan founder and trader, working from a laptop on a terrace" loading="eager"/>
+<img id="spartan-story-photo" alt="Mark, Stoic Spartan founder and trader, working from a laptop on a terrace" loading="eager">
 <figcaption>Mark • Stoic Spartan</figcaption>
 </figure>
 </div>
@@ -2098,6 +2098,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
   show(0);
   syncPauseButton();
   scheduleRotation();
+})();
+</script><script>
+(() => {
+  const img=document.getElementById('spartan-story-photo');
+  if(!img) return;
+  fetch('spartan-story-photo.b64?v=20261006-final',{cache:'no-store'})
+    .then(r=>{if(!r.ok) throw new Error('Image asset unavailable'); return r.text();})
+    .then(b64=>{img.src='data:image/jpeg;base64,'+b64.trim();})
+    .catch(()=>{img.style.display='none';});
 })();
 </script></body>
 </html>
