@@ -1686,7 +1686,103 @@ body{overflow-x:hidden}
   }
 }
 
-</style></head>
+</style><style id="hero-emphasis-20261008">
+/* V1 hero emphasis: make the two core positioning lines visually legible without competing with the headline. */
+.hero-copy-v485 .hero-positioning{
+  display:flex!important;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:8px 10px;
+  margin:0 0 18px!important;
+  color:var(--gold2)!important;
+  font-size:11px!important;
+  letter-spacing:.12em!important;
+  line-height:1.2!important;
+}
+.hero-copy-v485 .hero-positioning span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:30px;
+  padding:7px 11px;
+  border:1px solid rgba(227,189,120,.46);
+  border-radius:999px;
+  background:linear-gradient(180deg,rgba(200,154,75,.12),rgba(200,154,75,.035));
+  color:#efd49d;
+  font-weight:800;
+  text-shadow:0 0 16px rgba(227,189,120,.18);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.018),0 7px 22px rgba(0,0,0,.18);
+}
+.hero-copy-v485 .hero-positioning b{
+  color:var(--gold2);
+  font-weight:400;
+  opacity:.62;
+}
+.hero-copy-v485 .trinity-line{
+  gap:8px 10px!important;
+  align-items:center;
+  margin-bottom:22px!important;
+}
+.hero-copy-v485 .trinity-line .term{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:32px;
+  padding:8px 12px;
+  border:1px solid rgba(200,154,75,.52);
+  border-radius:4px;
+  background:linear-gradient(135deg,rgba(200,154,75,.14),rgba(227,189,120,.045));
+  color:#f2d59b;
+  font-weight:800;
+  letter-spacing:.105em;
+  text-shadow:0 0 18px rgba(227,189,120,.20);
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+.hero-copy-v485 .trinity-line b{
+  color:var(--gold2)!important;
+  opacity:.58;
+}
+@media (max-width:860px){
+  .hero-copy-v485 .hero-positioning{justify-content:center!important;gap:7px 8px;margin-bottom:17px!important}
+  .hero-copy-v485 .trinity-line{justify-content:center!important;gap:7px 8px!important}
+}
+@media (max-width:580px){
+  .hero-copy-v485 .hero-positioning{
+    gap:6px!important;
+    font-size:9.5px!important;
+    letter-spacing:.09em!important;
+  }
+  .hero-copy-v485 .hero-positioning span{
+    min-height:28px;
+    padding:6px 9px;
+  }
+  .hero-copy-v485 .hero-positioning b{display:none}
+  .hero-copy-v485 .trinity-line{
+    display:grid!important;
+    grid-template-columns:1fr 1fr;
+    width:100%;
+    max-width:390px;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    gap:7px!important;
+  }
+  .hero-copy-v485 .trinity-line .term{
+    min-height:34px;
+    padding:7px 8px;
+    white-space:normal!important;
+    text-align:center;
+    font-size:9.5px!important;
+    line-height:1.25;
+  }
+  .hero-copy-v485 .trinity-line .term:last-of-type{
+    grid-column:1/-1;
+    width:calc(50% - 3.5px);
+    justify-self:center;
+  }
+  .hero-copy-v485 .trinity-line b{display:none}
+}
+</style>
+</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
@@ -1711,7 +1807,7 @@ body{overflow-x:hidden}
 <main id="main">
 <section aria-labelledby="hero-title" class="split-hero-v485" id="home">
 <div class="hero-copy-v485">
-<p class="eyebrow">Trader Development • Performance • Mastery</p>
+<p class="eyebrow hero-positioning" aria-label="Trader Development, Performance, Mastery"><span>Trader Development</span><b aria-hidden="true">•</b><span>Performance</span><b aria-hidden="true">•</b><span>Mastery</span></p>
 <h1 id="hero-title">Master The Holy Trinity Of Trading.</h1>
 <div aria-label="Technical Analysis, Risk Management, Trading Psychology" class="trinity-line">
 <span class="term">Technical Analysis</span><b>•</b><span class="term">Risk Management</span><b>•</b><span class="term">Trading Psychology</span>
