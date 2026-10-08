@@ -1889,6 +1889,225 @@ a:not(.button):not(.nav-cta):not(.mobile-apply){text-decoration-color:rgba(240,1
   .proof-item-markets .proof-number-line .proof-wording{max-width:125px}
 }
 </style>
+<style id="sitewide-contrast-v2-20261008">
+/* Final readability pass: brighter body copy and richer premium gold, without flattening hierarchy. */
+:root{
+  --gold:#dda94b;
+  --gold2:#efc66f;
+  --gold3:#a87932;
+  --muted:#b9b1a6;
+  --line:rgba(221,169,75,.42);
+}
+body{color:#f2ece3!important}
+.section p:not(.eyebrow):not(.gold-line),
+.section li,
+.section small,
+.mark-copy p,
+.story-copy p,
+.faq-grid p,
+.service-grid p,
+.review-grid p,
+.price-card p,
+.application-card p,
+.testimonial-body p{
+  color:#c9c1b7!important;
+}
+.lead,.hero-lead{color:#d5cdc2!important}
+.context-line,
+.relationship-copy,
+.mentoring-principles p,
+.work-accordion details p,
+.info-foundations-v54 p,
+.info-method-v54 span,
+.problem-grid span,
+.credential-item span,
+.proof-item span,
+.secondary-credentials,
+.secondary-credentials span{
+  color:#c3baae!important;
+}
+.eyebrow,
+.expertise-label,
+.gold-line,
+.mentoring-principles h3,
+.info-bridge-v54,
+.info-footer-v54,
+.carousel-topline span{
+  color:#e7b85a!important;
+}
+.button.primary,
+.story-read-link{
+  border-color:#dda94b!important;
+}
+</style>
+<style id="index-credential-and-hierarchy-fix-20261008">
+/* Proof band: titles match Funded/Technical, with numerals as slightly stronger anchors. */
+.proof-band-v510 .proof-item strong{
+  color:#e2b65f!important;
+}
+.proof-band-v510 .proof-title{
+  display:flex!important;
+  align-items:baseline!important;
+  justify-content:center!important;
+  gap:6px!important;
+  flex-wrap:wrap!important;
+  font-family:var(--serif)!important;
+  font-size:clamp(34px,3.4vw,50px)!important;
+  line-height:.95!important;
+  letter-spacing:-.02em!important;
+  color:#e2b65f!important;
+  white-space:normal!important;
+}
+.proof-band-v510 .proof-title .proof-big-number{
+  display:inline!important;
+  margin:0!important;
+  font:inherit!important;
+  font-size:1.12em!important;
+  line-height:.8!important;
+  color:#f0c66f!important;
+}
+.proof-band-v510 .proof-title .proof-title-words{
+  display:inline!important;
+  margin:0!important;
+  font:inherit!important;
+  font-size:1em!important;
+  line-height:.95!important;
+  color:#e2b65f!important;
+}
+.proof-band-v510 .proof-item>span{
+  color:#c9bda9!important;
+}
+
+/* Trusted Expertise: 18 Years must match the scale of the other credential headings. */
+.v54-expertise .credential-item strong{
+  color:#f0e9df!important;
+}
+.v54-expertise .credential-item .credential-years{
+  display:flex!important;
+  align-items:baseline!important;
+  justify-content:center!important;
+  gap:5px!important;
+  font-size:clamp(20px,1.8vw,27px)!important;
+  line-height:1.12!important;
+}
+.v54-expertise .credential-item .credential-years span{
+  display:inline!important;
+  margin:0!important;
+  padding:0!important;
+  font-family:var(--serif)!important;
+  font-size:1em!important;
+  line-height:1!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+  color:#f0e9df!important;
+}
+.v54-expertise .credential-item .credential-years .credential-number{
+  font-size:1.14em!important;
+  color:#efc66f!important;
+}
+.v54-expertise .credential-item>span{
+  color:#c7b9a3!important;
+}
+.secondary-credentials,.secondary-credentials span{
+  color:#bfae90!important;
+}
+
+/* Keep the working-process summaries prominent but not stark white. */
+.work-accordion summary{
+  color:#d4ccc1!important;
+  font-weight:650!important;
+}
+.work-accordion summary span,
+.work-accordion summary:after{
+  color:#dcae54!important;
+}
+.work-accordion details p{
+  color:#bfb7ac!important;
+}
+
+/* Brighter but restrained cards and copy in the behavioural section. */
+.mentoring-principles h3{color:#dcae54!important}
+.mentoring-principles p{color:#bfb7ac!important}
+.problem-grid span{color:#beb5a8!important}
+.mark-copy-wide>p:not(.eyebrow):not(.lead):not(.context-line){
+  color:#c9c1b7!important;
+}
+.context-line{color:#c8beb1!important}
+.context-line strong{color:#e3b45a!important}
+
+/* More Than Trading foundation cards. */
+.info-foundations-v54 h3{
+  color:#f0e8dc!important;
+}
+.info-foundations-v54 h3 .foundation-number{
+  display:inline-block!important;
+  margin-right:6px;
+  color:#efc66f!important;
+  font-size:1.15em!important;
+  line-height:.9!important;
+  vertical-align:baseline;
+}
+.info-foundations-v54 p{color:#bfb7ac!important}
+.info-top-v54 small{color:#c7b28d!important}
+.info-method-v54 span{color:#c5bdb1!important}
+
+/* Section labels and gold accents get a subtle lift, not neon. */
+.how-i-work>.eyebrow:first-child,
+.worked-heading .eyebrow,
+.expertise-label{
+  color:#edc16a!important;
+}
+
+/* Mobile proof layout: keep 2x2, stop collisions, keep all four title scales consistent. */
+@media(max-width:580px){
+  .proof-band-v510{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    width:100%!important;
+    overflow:hidden!important;
+  }
+  .proof-band-v510 .proof-item{
+    min-width:0!important;
+    min-height:158px!important;
+    padding:24px 9px 22px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+  }
+  .proof-band-v510 .proof-item strong,
+  .proof-band-v510 .proof-title{
+    width:100%!important;
+    font-size:clamp(27px,7.1vw,31px)!important;
+    line-height:1!important;
+    text-align:center!important;
+  }
+  .proof-band-v510 .proof-title{
+    gap:4px!important;
+  }
+  .proof-band-v510 .proof-title .proof-big-number{
+    font-size:1.12em!important;
+  }
+  .proof-band-v510 .proof-title .proof-title-words{
+    font-size:1em!important;
+  }
+  .proof-band-v510 .proof-item>span{
+    width:100%!important;
+    margin-top:13px!important;
+    padding:0 4px!important;
+    font-size:8.4px!important;
+    line-height:1.48!important;
+    letter-spacing:.075em!important;
+    text-align:center!important;
+  }
+  .v54-expertise .credential-item .credential-years{
+    font-size:20px!important;
+  }
+  .v54-expertise .credential-item .credential-years .credential-number{
+    font-size:1.16em!important;
+  }
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1932,9 +2151,9 @@ a:not(.button):not(.nav-cta):not(.mobile-apply){text-decoration-color:rgba(240,1
 </figure>
 </section>
 <section aria-label="Stoic Spartan credentials at a glance" class="proof-band proof-band-v510">
-<div class="proof-item proof-item-markets"><strong class="proof-number-line"><span class="proof-number">13</span><span class="proof-wording">YEARS<br/>IN THE MARKETS</span></strong><span>Investor • Swing Trader • Day Trader • Scalper</span></div>
-<div class="proof-item"><strong class="proof-number-line"><span class="proof-number">18</span><span class="proof-wording">YEARS</span></strong><span>Behavioural Transformation Experience</span></div>
-<div class="proof-item"><strong>FUNDED</strong><span>Professional Prop-Firm Trader</span></div>
+<div class="proof-item proof-item-markets"><strong class="proof-title"><span class="proof-big-number">13</span><span class="proof-title-words">YEARS IN THE MARKETS</span></strong><span>Investor • Swing Trader • Day Trader • Scalper</span></div>
+<div class="proof-item"><strong class="proof-title"><span class="proof-big-number">18</span><span class="proof-title-words">YEARS</span></strong><span>Behavioural Transformation Experience</span></div>
+<div class="proof-item"><strong>FUNDED</strong><span>Professional Prop-Firm Trader &amp; Scaling Specialist</span></div>
 <div class="proof-item"><strong>TECHNICAL</strong><span>Market &amp; Technical Analyst</span></div>
 </section>
 <section class="section mark-intro mark-detail" id="mark">
@@ -1947,7 +2166,7 @@ a:not(.button):not(.nav-cta):not(.mobile-apply){text-decoration-color:rgba(240,1
 <div class="credential-item"><strong class="credential-years"><span class="credential-number">18</span><span>Years</span></strong><span>Behavioural Transformation &amp; Support Experience</span></div>
 <div class="credential-item"><strong>Funded Trader</strong><span>Professional Prop-Firm Experience</span></div>
 <div class="credential-item"><strong>Technical &amp; Market Analyst</strong><span>Technical, Contextual &amp; Multi-Timeframe Analysis</span></div>
-<div class="credential-item"><strong>Educator &amp; Facilitator</strong><span>Experienced Teaching, Group Facilitation &amp; Communication</span></div>
+<div class="credential-item"><strong>Educator &amp; Facilitator</strong><span>Experienced Teaching, Group Facilitation, Communication &amp; Motivational Speaking</span></div>
 </div>
 <p class="secondary-credentials"><span>Trading Performance Specialist</span><b>•</b><span>Performance Coach</span><b>•</b><span>Strategy Development</span><b>•</b><span>Performance Under Pressure</span></p>
 <p>Mark is an investor, trader and trading performance specialist with 13 years’ experience in the market. His experience spans a multitude of assets and markets, as well as longer-term investing, swing trading, intraday trading and scalping, giving him first-hand understanding of the different psychological, technical and risk demands each trading style creates. Alongside his market experience, Mark brings 18 years of professional experience helping people understand and change deeply ingrained, detrimental and self-destructive patterns of behaviour.</p>
@@ -2017,8 +2236,8 @@ a:not(.button):not(.nav-cta):not(.mobile-apply){text-decoration-color:rgba(240,1
 <div class="info-top-v54"><span>STOIC SPARTAN</span><strong>MORE THAN TRADING</strong><small>DISCIPLINE • MINDSET • FREEDOM</small></div>
 <div class="info-foundations-v54">
 <article><b>01</b><h3>Forged Through Adversity</h3><p>Personal challenge, growth and behavioural transformation.</p></article>
-<article><b>02</b><h3>Years In The Markets</h3><p>Extensive experience analysing and navigating financial markets.</p></article>
-<article><b>03</b><h3>18 Years Of Transformation</h3><p>Experience supporting people through behavioural and personal change.</p></article>
+<article><b>02</b><h3><span class="foundation-number">13</span> Years In The Markets</h3><p>Extensive experience analysing and navigating financial markets.</p></article>
+<article><b>03</b><h3><span class="foundation-number">18</span> Years Of Transformation</h3><p>Experience supporting people through behavioural and personal change.</p></article>
 <article><b>04</b><h3>Built On Principles</h3><p>Accountability, self-awareness, discipline and structured development.</p></article>
 </div>
 <div class="info-bridge-v54">Those foundations now power a trader-development methodology built to create disciplined, resilient and capable market operators.</div>
