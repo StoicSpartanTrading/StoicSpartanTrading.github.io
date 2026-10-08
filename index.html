@@ -1825,6 +1825,70 @@ body{overflow-x:hidden}
   }
 }
 </style>
+<style id="sitewide-legibility-20261008">
+/* Site-wide legibility and premium-gold refinement. */
+:root{
+  --gold:#d8a846;
+  --gold2:#f0c66f;
+  --gold3:#a97831;
+  --muted:#bdb5aa;
+  --line:rgba(216,168,70,.42);
+}
+body{color:#f4efe6}
+p,li{color:#d8d0c5}
+.lead,.hero-lead{color:#ddd5ca!important}
+.eyebrow,.gold-line{color:var(--gold2)!important}
+a:not(.button):not(.nav-cta):not(.mobile-apply){text-decoration-color:rgba(240,198,111,.42)}
+.context-line{color:#ddd3c6!important;background:rgba(216,168,70,.065)!important}
+.context-line strong{color:var(--gold2)!important}
+.secondary-credentials{color:#d8c596!important}
+.credential-item span,.proof-item span{color:#e0d6c8!important}
+</style>
+<style id="credential-number-emphasis-20261008">
+/* Make years-of-experience proof points read as deliberate numerical anchors. */
+.proof-number-line{
+  display:flex!important;
+  align-items:baseline;
+  justify-content:center;
+  gap:7px;
+  flex-wrap:wrap;
+}
+.proof-number-line .proof-number{
+  display:inline-block!important;
+  margin:0!important;
+  color:var(--gold2)!important;
+  font-family:var(--serif);
+  font-size:1.42em!important;
+  line-height:.78!important;
+  letter-spacing:-.04em!important;
+}
+.proof-number-line .proof-wording{
+  display:inline-block!important;
+  margin:0!important;
+  color:#e1bd72!important;
+  font-size:.78em!important;
+  line-height:1.02!important;
+  letter-spacing:.01em!important;
+}
+.proof-item-markets .proof-number-line .proof-wording{max-width:170px;text-align:left}
+.credential-years{
+  display:inline-flex!important;
+  align-items:baseline;
+  justify-content:center;
+  gap:5px;
+}
+.credential-years .credential-number{
+  color:var(--gold2)!important;
+  font-size:1.32em!important;
+  line-height:.8!important;
+}
+@media(max-width:580px){
+  .proof-number-line{gap:5px}
+  .proof-number-line .proof-number{font-size:1.5em!important}
+  .proof-number-line .proof-wording{font-size:.76em!important}
+  .proof-item-markets .proof-number-line .proof-wording{max-width:125px}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1868,8 +1932,8 @@ body{overflow-x:hidden}
 </figure>
 </section>
 <section aria-label="Stoic Spartan credentials at a glance" class="proof-band proof-band-v510">
-<div class="proof-item proof-item-markets"><strong>13 YEARS<br/>IN THE MARKETS</strong><span>Investor • Swing Trader • Day Trader • Scalper</span></div>
-<div class="proof-item"><strong>18 YEARS</strong><span>Behavioural Transformation Experience</span></div>
+<div class="proof-item proof-item-markets"><strong class="proof-number-line"><span class="proof-number">13</span><span class="proof-wording">YEARS<br/>IN THE MARKETS</span></strong><span>Investor • Swing Trader • Day Trader • Scalper</span></div>
+<div class="proof-item"><strong class="proof-number-line"><span class="proof-number">18</span><span class="proof-wording">YEARS</span></strong><span>Behavioural Transformation Experience</span></div>
 <div class="proof-item"><strong>FUNDED</strong><span>Professional Prop-Firm Trader</span></div>
 <div class="proof-item"><strong>TECHNICAL</strong><span>Market &amp; Technical Analyst</span></div>
 </section>
@@ -1880,7 +1944,7 @@ body{overflow-x:hidden}
 <p class="lead">Technical market education and human performance belong together. Stoic Spartan develops both — the ability to read the market and the ability to execute under pressure.</p>
 <p class="expertise-label">Trusted Expertise</p>
 <div aria-label="Mark's primary credentials and expertise" class="credential-grid v54-expertise credentials-primary" id="expertise">
-<div class="credential-item"><strong>18 Years</strong><span>Behavioural Transformation &amp; Support Experience</span></div>
+<div class="credential-item"><strong class="credential-years"><span class="credential-number">18</span><span>Years</span></strong><span>Behavioural Transformation &amp; Support Experience</span></div>
 <div class="credential-item"><strong>Funded Trader</strong><span>Professional Prop-Firm Experience</span></div>
 <div class="credential-item"><strong>Technical &amp; Market Analyst</strong><span>Technical, Contextual &amp; Multi-Timeframe Analysis</span></div>
 <div class="credential-item"><strong>Educator &amp; Facilitator</strong><span>Experienced Teaching, Group Facilitation &amp; Communication</span></div>
