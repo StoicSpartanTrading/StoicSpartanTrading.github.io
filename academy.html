@@ -1738,6 +1738,17 @@ h2,
   color:var(--ss-ivory)!important;
 }
 </style>
+<style id="stoic-spartan-featured-guide">
+.ss-featured-guide{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);gap:clamp(18px,4vw,40px);align-items:center;border:1px solid rgba(200,154,75,.55);padding:clamp(18px,3vw,32px);background:linear-gradient(125deg,rgba(200,154,75,.085),#11100d);margin:28px 0 24px}
+.ss-guide-cover{display:block;width:100%;height:auto;aspect-ratio:768/1024;object-fit:contain;box-shadow:0 12px 36px rgba(0,0,0,.42)}
+.ss-guide-details h3{font-family:var(--serif);color:var(--ink);font-size:clamp(29px,3.5vw,45px);line-height:1.05;margin:13px 0}
+.ss-guide-details p{font-size:15px;color:#d2c9bc;line-height:1.75;max-width:630px}
+.ss-guide-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:23px}
+.ss-guide-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:11px 17px;border:1px solid var(--gold);font-weight:700;font-size:12px;letter-spacing:.06em;text-decoration:none;color:var(--ink)}
+.ss-guide-actions a:first-child{background:var(--gold);color:#0d0b08}
+.ss-guide-actions a:hover,.ss-guide-actions a:focus-visible{outline:2px solid var(--gold2);outline-offset:3px}
+@media(max-width:640px){.ss-featured-guide{grid-template-columns:1fr;gap:20px}.ss-guide-cover{width:min(100%,260px);margin-inline:auto}.ss-guide-details h3{font-size:33px}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -1769,6 +1780,18 @@ h2,
 <h2 class="section-title">Knowledge built for application.</h2>
 </div>
 <p class="lead">The Academy will turn an existing body of research, teaching material and trader-performance tools into practical resources you can actually use.</p>
+</div>
+<div class="ss-featured-guide" id="market-psychology-guide" aria-label="Featured free trading psychology guide">
+  <img class="ss-guide-cover" src="assets/fear-market-psychology-cover.png" alt="Cover of Fear, Market Psychology &amp; The Trader's Mindset, a Stoic Spartan guide to disciplined execution" loading="lazy"/>
+  <div class="ss-guide-details">
+    <span class="resource-status available">FREE ACADEMY GUIDE · 9 PAGES</span>
+    <h3>Fear, Market Psychology &amp; The Trader’s Mindset</h3>
+    <p>Explore market sentiment, probability, position sizing and the discipline of executing a defined trading process despite uncertainty.</p>
+    <div class="ss-guide-actions">
+      <a href="assets/stoic-spartan-fear-market-psychology-guide.pdf" target="_blank" rel="noopener" aria-label="Read Fear, Market Psychology and the Trader's Mindset PDF in a new tab">Read the guide</a>
+      <a href="assets/stoic-spartan-fear-market-psychology-guide.pdf" download="Stoic-Spartan-Fear-Market-Psychology-Guide.pdf">Download PDF</a>
+    </div>
+  </div>
 </div>
 <div class="featured-resources">
 <article class="resource featured-resource">
