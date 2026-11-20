@@ -154,3 +154,31 @@
 .trifecta-section .section-title,.trifecta-section .lead,.trifecta-section .research-line,.trifecta-section .research-note{margin-left:auto;margin-right:auto;text-wrap:balance}
 .trifecta-section .trinity-statements p{grid-template-columns:1fr;gap:4px;justify-items:center;text-align:center}
 @media (max-width:580px){.trifecta-section .eyebrow{gap:10px;font-size:14px;letter-spacing:.14em}.trifecta-section .eyebrow::before,.trifecta-section .eyebrow::after{flex-basis:22px}}
+
+/* ---- Academy: Dopamine Trigger Avoidance Checklist ---- */
+.ss-checklist{grid-template-columns:minmax(0,420px) minmax(0,1fr);align-items:start}
+.ss-checklist-poster{display:block;line-height:0}
+.ss-checklist .ss-guide-details{align-self:center}
+.ss-checklist .ss-guide-actions a:first-child{background:var(--gold);color:var(--obsidian)}
+.cl-text{grid-column:1/-1;border-top:1px solid var(--seam);padding-top:18px}
+.cl-text summary{cursor:pointer;font-weight:600;color:var(--pale-gold);min-height:44px;display:flex;align-items:center;gap:10px;list-style:none}
+.cl-text summary::-webkit-details-marker{display:none}
+.cl-text summary::before{content:"+";display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border:1px solid var(--gold);color:var(--gold);font-weight:700}
+.cl-text[open] summary::before{content:"−"}
+.cl-text summary:focus-visible{outline:2px solid var(--pale-gold);outline-offset:3px}
+.cl-body{padding-top:14px}
+.cl-kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.cl-title{font-family:var(--serif);font-size:clamp(24px,2.4vw,32px);font-weight:600;color:var(--parchment);line-height:1.15;margin:0 0 6px}
+.cl-sub{font-style:italic;color:var(--stone);margin:0 0 20px}
+.cl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.cl-section{background:var(--forge);border:1px solid var(--seam);border-radius:3px;padding:18px 20px}
+.cl-section h4,.cl-loop h4{font-family:var(--serif);font-variant:small-caps;font-size:21px;font-weight:600;color:#D4A85A;line-height:1.2;margin:0 0 10px}
+.cl-section h5{font-family:var(--sans);font-size:15px;font-weight:700;color:var(--pale-gold);margin:14px 0 6px}
+.cl-section h5::before{content:"◆ ";color:var(--gold);font-size:12px}
+.cl-boxes{list-style:none;margin:0;padding:0}
+.cl-boxes li{position:relative;padding:3px 0 3px 26px;font-size:15px;line-height:1.45;color:var(--stone)}
+.cl-boxes li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:12px;border:1.5px solid var(--pale-gold);border-radius:2px}
+.cl-note{margin:12px 0 0;padding:10px 12px;border:1px solid var(--bronze);border-radius:3px;font-style:italic;font-size:14.5px;color:var(--pale-gold)}
+.cl-loop{margin-top:16px;text-align:center;border:1px solid var(--bronze);border-radius:3px;padding:20px;background:var(--forge)}
+.cl-loop p{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2vw,23px);color:var(--parchment);margin:0}
+@media (max-width:900px){.ss-checklist{grid-template-columns:1fr}.ss-checklist .ss-guide-cover{max-width:100%}.ss-checklist-poster{max-width:520px}.cl-grid{grid-template-columns:1fr}}
