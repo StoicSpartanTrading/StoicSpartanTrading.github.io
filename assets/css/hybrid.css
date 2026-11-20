@@ -215,4 +215,15 @@
 .lb-close{position:absolute;top:10px;right:12px;width:44px;height:44px;border:1px solid var(--gold);background:rgba(8,8,6,.85);color:var(--pale-gold);font-size:26px;line-height:1;cursor:pointer;border-radius:2px}
 .lb-close:focus-visible,.lb-open:focus-visible{outline:2px solid var(--pale-gold);outline-offset:3px}
 html.lb-lock,html.lb-lock body{overflow:hidden}
-.featured-resources>article:only-child{grid-column:1/-1}
+/* resource cards: thumbnail beside kicker + title, intro and actions below (works for 3+ cards) */
+.res-card{grid-template-columns:120px minmax(0,1fr);grid-template-rows:auto auto auto auto 1fr auto;column-gap:16px;row-gap:0}
+.res-card .res-body{display:contents}
+.res-thumb{grid-column:1;grid-row:1/4;align-self:start}
+.res-card .resource-status{grid-column:2;grid-row:1}
+.res-card h3{grid-column:2;grid-row:2}
+.res-card .res-body p{grid-column:1/-1;grid-row:4;margin:14px 0 12px}
+.res-card .res-actions{grid-column:1/-1;grid-row:6}
+@media (min-width:1024px){.res-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.res-card{grid-template-columns:140px minmax(0,1fr)}.res-card h3{font-size:clamp(20px,1.6vw,23px)}}
+@media (max-width:1023px){.res-grid{grid-template-columns:1fr}}
+@media (min-width:600px) and (max-width:1023px){.res-card .res-body p{grid-column:2;grid-row:3;margin:8px 0 12px}.res-card .res-actions{grid-column:2;grid-row:4}.res-thumb{grid-row:1/6}.res-card{grid-template-rows:auto auto auto auto 1fr}}
+@media (max-width:560px){.res-card{grid-template-columns:110px minmax(0,1fr);column-gap:14px}.res-card .res-body p{margin:12px 0 10px}}
