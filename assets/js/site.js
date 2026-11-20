@@ -126,6 +126,42 @@
   function openTarget(){ if(!location.hash) return; var el=null; try{ el=document.querySelector(location.hash); }catch(e){} if(!el) return;
     var d=el.tagName==="DETAILS"?el:el.closest("details"); if(d){ d.open=true; setTimeout(function(){ el.scrollIntoView({block:"start"}); },30); } }
   window.addEventListener("hashchange",openTarget); openTarget();
+
+  /* Lightbox for resource thumbnails (without JS the link simply opens the full-size image) */
+  var lbLinks=document.querySelectorAll("a[data-lightbox]");
+  if(lbLinks.length){
+    var lb=null, lbImg, lbCap, lbOpen, lbClose, lbReturn=null;
+    var buildLb=function(){
+      lb=document.createElement("div"); lb.className="lb"; lb.hidden=true;
+      lb.setAttribute("role","dialog"); lb.setAttribute("aria-modal","true"); lb.setAttribute("aria-labelledby","lb-cap");
+      lb.innerHTML='<button type="button" class="lb-close" aria-label="Close enlarged image">&times;</button><img alt=""><div class="lb-bar"><p class="lb-cap" id="lb-cap"></p><a class="lb-open" target="_blank" rel="noopener">Open full size in a new tab &#8599;</a></div>';
+      document.body.appendChild(lb);
+      lbImg=lb.querySelector("img"); lbCap=lb.querySelector(".lb-cap"); lbOpen=lb.querySelector(".lb-open"); lbClose=lb.querySelector(".lb-close");
+      lbClose.addEventListener("click",closeLb);
+      lb.addEventListener("click",function(e){ if(e.target===lb||e.target.classList.contains("lb-bar")) closeLb(); });
+      lb.addEventListener("keydown",function(e){
+        if(e.key==="Escape"){ e.preventDefault(); closeLb(); return; }
+        if(e.key==="Tab"){ var f=[lbClose,lbOpen], i=f.indexOf(document.activeElement);
+          e.preventDefault(); f[i<0?0:(i+(e.shiftKey?f.length-1:1))%f.length].focus(); }
+      });
+    };
+    var openLb=function(a){
+      if(!lb) buildLb();
+      var img=a.querySelector("img");
+      lbImg.src=a.getAttribute("href"); lbImg.alt=img?img.alt:"";
+      var tmp=document.createElement("span"); tmp.innerHTML=a.getAttribute("data-caption")||""; lbCap.textContent=tmp.textContent;
+      lbOpen.href=a.getAttribute("href"); lbReturn=a;
+      lb.hidden=false; document.documentElement.classList.add("lb-lock"); lbClose.focus();
+    };
+    var closeLb=function(){
+      if(!lb||lb.hidden) return;
+      lb.hidden=true; document.documentElement.classList.remove("lb-lock");
+      if(lbReturn) lbReturn.focus();
+    };
+    Array.prototype.forEach.call(lbLinks,function(a){
+      a.addEventListener("click",function(e){ if(e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button===1) return; e.preventDefault(); openLb(a); });
+    });
+  }
 })();
 
 
